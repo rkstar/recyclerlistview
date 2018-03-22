@@ -18,7 +18,6 @@
  * TODO: Observe size changes on web to optimize for reflowability
  * TODO: Solve //TSI
  */
-import debounce from "lodash-es/debounce";
 import * as PropTypes from "prop-types";
 import * as React from "react";
 import { ObjectUtil, Default } from "ts-object-utils";
@@ -53,6 +52,7 @@ const IS_WEB = false;
 //const IS_WEB = true;
 //#endif
 
+const debounce = require('lodash.debounce');
 const refreshRequestDebouncer = debounce((executable: () => void) => {
     executable();
 });
